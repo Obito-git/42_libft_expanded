@@ -9,9 +9,7 @@
 /*   Updated: 2021/11/23 11:12:47 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
+#include "../libft.h"
 char	*ft_strnstr(const char	*str, const char	*to_find, size_t len)
 {
 	size_t	i;
@@ -19,8 +17,10 @@ char	*ft_strnstr(const char	*str, const char	*to_find, size_t len)
 
 	i = 0;
 	z = 0;
-	if (to_find[z] == '\0')
-		return ((char *)&str[z]);
+	if (!str)
+		return (NULL);
+	if (ft_strlen(to_find) == 0)
+		return ((char *)str);
 	while (str[i] && i < len)
 	{
 		while (to_find[z] == str[i + z] && i + z < len)
@@ -32,5 +32,5 @@ char	*ft_strnstr(const char	*str, const char	*to_find, size_t len)
 		z = 0;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

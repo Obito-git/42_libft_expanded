@@ -9,14 +9,7 @@
 /*   Updated: 2021/11/23 11:27:53 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
-static int	ft_isspace(char c)
-{
-	return (c == '\f' || c == '\t' || c == ' '
-		|| c == '\n' || c == '\r' || c == '\v');
-}
+#include "../libft.h"
 
 static int	get_int_len(const char *s)
 {

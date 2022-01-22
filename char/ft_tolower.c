@@ -9,17 +9,7 @@
 /*   Updated: 2021/11/23 11:22:44 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-/*
-*	linux fix for libft-unit-test
-*	https://github.com/alelievr/libft-unit-test
-*	
-*	line 28 insert
-*    
-*	else if (c < -1)
-*    	return (c + 256);
-*/
+#include "../libft.h"
 
 int	ft_tolower(int c)
 {

@@ -9,24 +9,7 @@
 /*   Updated: 2021/11/24 09:06:49 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-
-static char	*ft_strcat(char	*dest, const char	*src)
-{
-	size_t	dest_len;
-	size_t	i;
-
-	i = 0;
-	dest_len = ft_strlen(dest);
-	while (src[i])
-	{
-		dest[dest_len] = src[i];
-		i++;
-		dest_len++;
-	}
-	dest[dest_len] = '\0';
-	return (dest);
-}
+#include "../libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -38,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!res)
 		return (NULL);
 	res[0] = 0;
-	ft_strcat(res, s1);
-	ft_strcat(res, s2);
+	ft_strcat(s1, res);
+	ft_strcat(s2, res);
 	return (res);
 }

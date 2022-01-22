@@ -9,22 +9,7 @@
 /*   Updated: 2021/11/23 11:52:28 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
-static char	*ft_strcpy(char	*dest, const char	*src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+#include "../libft.h"
 
 static int	get_numblen(int n)
 {
@@ -50,7 +35,7 @@ static int	check_negative(char *str, int *last_index, int *n)
 {
 	if (*n == -2147483648)
 	{
-		ft_strcpy(str, "-2147483648");
+		ft_strcpy("-2147483648", str);
 		return (1);
 	}
 	if (*n < 0)
