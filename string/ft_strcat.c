@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-char	*ft_strcat(const char *src, char *dest)
+char	*ft_strcat(char *dest, const char *src)
 {
 	size_t	dest_len;
 	size_t	i;

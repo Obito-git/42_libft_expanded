@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!res)
 		return (NULL);
 	res[0] = 0;
-	ft_strcat(s1, res);
-	ft_strcat(s2, res);
+	ft_strcat(res, s1);
+	ft_strcat(res, s2);
 	return (res);
 }

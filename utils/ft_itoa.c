@@ -35,7 +35,7 @@ static int	check_negative(char *str, int *last_index, int *n)
 {
 	if (*n == -2147483648)
 	{
-		ft_strcpy("-2147483648", str);
+		ft_strcpy(str, "-2147483648");
 		return (1);
 	}
 	if (*n < 0)
