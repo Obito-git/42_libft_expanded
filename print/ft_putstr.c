@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 09:04:39 by amyroshn          #+#    #+#             */
-/*   Updated: 2021/11/24 09:04:41 by amyroshn         ###   ########.fr       */
+/*   Created: 2021/11/23 11:54:29 by amyroshn          #+#    #+#             */
+/*   Updated: 2021/11/23 11:54:59 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_putstr(char *s)
 {
-	t_list	*temp;
+	size_t	i;
 
-	temp = lst;
-	while (temp)
-	{
-		if (!temp->next)
-			return (temp);
-		temp = temp->next;
-	}
-	return (NULL);
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+		ft_putchar(s[i++]);
 }

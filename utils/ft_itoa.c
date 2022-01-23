@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 #include "../libft.h"
 
-static int	get_numblen(int n)
+static int	get_numblen(long n)
 {
 	int	size;
 
 	size = 1;
-	if (n == -2147483648)
-		return (11);
+	if (n == LONG_MIN - 1)
+		return (20);
 	if (n < 0)
 	{
 		n *= -1;
@@ -31,11 +31,11 @@ static int	get_numblen(int n)
 	return (size);
 }
 
-static int	check_negative(char *str, int *last_index, int *n)
+static int	check_negative(char *str, int *last_index, long *n)
 {
-	if (*n == -2147483648)
+	if (*n == LONG_MIN - 1)
 	{
-		ft_strcpy(str, "-2147483648");
+		ft_strcpy(str, "-9223372036854775808");
 		return (1);
 	}
 	if (*n < 0)
@@ -47,7 +47,7 @@ static int	check_negative(char *str, int *last_index, int *n)
 	return (0);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long n)
 {
 	int		numb_size;
 	char	*res;
