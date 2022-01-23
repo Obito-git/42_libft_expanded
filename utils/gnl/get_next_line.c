@@ -74,7 +74,7 @@ char	*read_bfrsep(t_felement *elem)
 		if (!elem->buffer)
 			elem->buffer = ft_strdup("");
 		elem->buf_temp[read_bytecount] = 0;
-		elem->buffer = ft_strjoin(elem->buffer, elem->buf_temp, BUFFER_SIZE);
+		elem->buffer = ft_strjoin_modif(elem->buffer, elem->buf_temp, BUFFER_SIZE);
 		nl_index = get_nlpos(elem->buf_temp);
 		if (!elem->buffer)
 			return (free_memory(elem, NULL));

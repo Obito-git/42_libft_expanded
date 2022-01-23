@@ -26,7 +26,7 @@ static int	ft_base_check(char	*base)
 
 static void	ft_print_base_numb(long nbr, char	*base)
 {
-	if (nbr % ft_strlen(base) != nbr)
+	if ((long) (nbr % ft_strlen(base)) != nbr)
 		ft_print_base_numb(nbr / ft_strlen(base), base);
 	ft_putchar(base[nbr % ft_strlen(base)]);
 }

@@ -57,6 +57,7 @@ int		ft_tolower(int c);
 int	ft_isspace(char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_atoi( const char *s);
+char	*get_next_line(int fd);
 size_t	ft_numblen(long numb);
 ////////////////////////////// PART 2 //////////////////////////////////////
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -74,6 +75,7 @@ void	ft_putendl(char *s);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr(long n);
 void	ft_putnbr_fd(long n, int fd);
+void	ft_putnbr_base(int	nbr, char	*base);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 /*//////////////////////////// BONUS ////////////////////////////////// */
 t_list	*ft_lstnew(void *content);

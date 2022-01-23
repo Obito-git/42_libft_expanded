@@ -39,37 +39,7 @@ char	*free_memory(t_felement *elem, char *tmp)
 	return (NULL);
 }
 
-size_t	ft_strlen(const char *str)
-{
-	int	length;
-
-	length = 0;
-	while (str != NULL && str[length])
-		length++;
-	return (length);
-}
-
-char	*ft_strdup(const char *src)
-{
-	char	*dest;
-	size_t	i;
-
-	if (!src)
-		return (NULL);
-	dest = (char *) malloc((ft_strlen(src) + 1) * sizeof(char));
-	if (dest == NULL)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-char	*ft_strjoin(char *to, char *from, size_t size)
+char	*ft_strjoin_modif(char *to, char *from, size_t size)
 {
 	char	*res;
 	size_t	i;
