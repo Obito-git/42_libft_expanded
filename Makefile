@@ -1,5 +1,3 @@
-#изменить инклуды файлов, протестить на тестере. добавить норминетку. добавить принтф и гнл и функции из пуш свапа
-
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
@@ -27,19 +25,28 @@ $(LST_DIR)ft_lstiter.c $(LST_DIR)ft_lstlast.c $(LST_DIR)ft_lstmap.c $(LST_DIR)ft
 
 OBJS = $(SRCS:.c=.o)
 
-all: $(NAME)
+all: git check $(NAME)
 	
-check:
-	@echo "$(SRCS)" | tr ' ' '\n' > make_src && sort make_src
-	@find -name "*.c" | sed 's/^..//g' > real_src && sort real_src
-	diff make_src real_src > difs.diff
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
+
+check:
+	@echo "$(SRCS)" | tr ' ' '\n' | sort > make_src
+	@find -name "*.c" | sed 's/^..//g' | sort > real_src
+	@$(eval DIF := $(shell diff -y make_src real_src | grep ">" | sed 's/^[^[:alnum:]]*//'))
+	@rm -f make_src && rm -f real_src
+	@if [ ! -z "$(DIF)" ]; then\
+		echo "Functions are not added in Makefile:";\
+		echo "\033[0;31m$(DIF)\033[0m";\
+		exit 1;\
+	fi
+
+git:
+	@git pull
 
 clean:
 	rm -f $(OBJS)
