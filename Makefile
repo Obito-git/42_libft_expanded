@@ -52,7 +52,6 @@ $(NAME): git check norm $(OBJS)
 
 check: generate_difs
 	@echo ${YELLOW}"Looking for makefile and src diffs..."${ENDCOLOR}
-	@sleep 1
 	@$(eval DIF := $(shell diff -y make_src real_src | grep ">" | sed 's/^[^[:alnum:]]*//'))
 	@rm -f make_src && rm -f real_src
 	@if [ ! -z "$(DIF)" ]; then\
@@ -63,7 +62,6 @@ check: generate_difs
 		echo ${GREEN}"OK"${ENDCOLOR};\
 	fi
 	@echo ""
-	@sleep 1
 
 generate_difs:
 	@rm -f make_src && rm -f real_src
@@ -73,16 +71,13 @@ generate_difs:
 git:
 	@echo ""
 	@echo ${YELLOW}"Git:"${GREEN}
-	@sleep 1
 	@git pull
 	@echo ${ENDCOLOR}
-	@echo ""
 
 norm:
 	@echo ${YELLOW}"Checking norminette.."${ENDCOLOR}
-	@sleep 1
-	@$(ecal NORM_RES :=$(shell norminette | grep "Error" | head -n1))
-	@if [ -z "$(NORM_RES)" ]; then\
+	@$(eval NORM_RES :=$(shell norminette | grep "Error" | head -n1))
+	@if [ ! -z "$(NORM_RES)" ]; then\
 		echo ${RED}"Norm KO"${ENDCOLOR};\
 		echo "";\
 		exit 1;\
@@ -90,7 +85,6 @@ norm:
 		echo ${GREEN}"Norm OK"${ENDCOLOR};\
 	fi
 	@echo ""
-	@sleep 1
 
 clean:
 	@rm -f $(OBJS)
