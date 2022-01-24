@@ -6,12 +6,12 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:10 by amyroshn          #+#    #+#             */
-/*   Updated: 2021/11/23 11:14:30 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 07:31:08 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../libft.h"
 
-int	ft_isalpha(int c)
+boolean	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

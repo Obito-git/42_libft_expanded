@@ -43,7 +43,7 @@ all: $(NAME)
 %.o: %.c
 	@$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME): git check $(OBJS)
+$(NAME): git check norm $(OBJS)
 	@echo ${GREEN}"Objects have been created!"${ENDCOLOR}
 	@echo ""
 	@ar rc $(NAME) $(OBJS)
@@ -62,6 +62,7 @@ check: generate_difs
 	else\
 		echo ${GREEN}"OK"${ENDCOLOR};\
 	fi
+	@echo ""
 	@sleep 1
 
 generate_difs:
@@ -76,6 +77,20 @@ git:
 	@git pull
 	@echo ${ENDCOLOR}
 	@echo ""
+
+norm:
+	@echo ${YELLOW}"Checking norminette.."${ENDCOLOR}
+	@sleep 1
+	@$(ecal NORM_RES :=$(shell norminette | grep "Error" | head -n1))
+	@if [ -z "$(NORM_RES)" ]; then\
+		echo ${RED}"Norm KO"${ENDCOLOR};\
+		echo "";\
+		exit 1;\
+	else\
+		echo ${GREEN}"Norm OK"${ENDCOLOR};\
+	fi
+	@echo ""
+	@sleep 1
 
 clean:
 	@rm -f $(OBJS)

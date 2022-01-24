@@ -6,7 +6,7 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:02:42 by amyroshn          #+#    #+#             */
-/*   Updated: 2021/11/24 09:23:28 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 07:44:08 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,47 +26,24 @@ typedef struct s_list
 
 typedef int boolean;
 
-/*/////////////////// FIRST PART //////////////////////////////////////////// */
-int		ft_printf(const char *s, ...);
+/* char/ */
+boolean	ft_isalpha(int c);
+boolean	ft_isdigit(int c);
+boolean	ft_isalnum(int c);
+boolean	ft_isascii(int c);
+boolean	ft_isprint(int c);
+boolean	ft_isspace(char c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+/* mem/ */
 void	*ft_memset(void *destination, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memmove(void *destination, const void *source, size_t size);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
-char	*ft_strchr(const char *str, int c);
-char	*ft_strrchr(const char *str, int c);
-char	*ft_strdup(const char *src);
-char	*ft_strrev(char *str);	
-size_t	ft_strlen(const char *str);
-int	ft_strcmp(char	*s1, char	*s2);
-int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-size_t	ft_strlcat(char	*dest, const char	*src, size_t	size);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strcat(char *dest, const char *src);
-char	*ft_strnstr(const char	*str, const char	*to_find, size_t len);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int	ft_isspace(char c);
-void	*ft_calloc(size_t nmemb, size_t size);
-int		ft_atoi( const char *s);
-char	*get_next_line(int fd);
-size_t	ft_numblen(long numb);
-////////////////////////////// PART 2 //////////////////////////////////////
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
-char	*ft_itoa(long n);
-char *ft_convert_base(unsigned long nbr, char *base);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/* print/ */
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char *s);
@@ -76,8 +53,33 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr(long n);
 void	ft_putnbr_fd(long n, int fd);
 void	ft_putnbr_base(int	nbr, char	*base);
+int		ft_printf(const char *s, ...);
+/* string/ */
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);
+char	*ft_strdup(const char *src);
+char	*ft_strrev(char *str);	
+size_t	ft_strlen(const char *str);
+int		ft_strcmp(char	*s1, char	*s2);
+int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char	*dest, const char	*src, size_t	size);
+char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strcat(char *dest, const char *src);
+char	*ft_strnstr(const char	*str, const char	*to_find, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	**ft_split(char const *s, char c);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-/*//////////////////////////// BONUS ////////////////////////////////// */
+/* utils/ */
+int		ft_atoi( const char *s);
+char	*get_next_line(int fd);
+size_t	ft_numblen(long numb);
+char	*ft_itoa(long n);
+char	*ft_convert_base(unsigned long nbr, char *base);
+/* lists/ */
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *lst);
