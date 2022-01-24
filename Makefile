@@ -89,7 +89,7 @@ clean:
 	@rm -f */main.c
 	@rm -f make_src && rm -f real_src
 	@echo ""
-	@echo ${GREEN}"Objects and debris were successfully removed"${RESET}
+	@echo ${GREEN}"Objects and trash were successfully removed"${RESET}
 
 fclean: clean
 	@rm -f $(NAME)
