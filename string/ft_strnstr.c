@@ -6,10 +6,11 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:12:44 by amyroshn          #+#    #+#             */
-/*   Updated: 2021/11/23 11:12:47 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:03:12 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../libft.h"
+
 char	*ft_strnstr(const char	*str, const char	*to_find, size_t len)
 {
 	size_t	i;

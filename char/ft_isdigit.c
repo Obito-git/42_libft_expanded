@@ -6,12 +6,12 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:15:04 by amyroshn          #+#    #+#             */
-/*   Updated: 2022/01/24 07:31:46 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:02:07 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../libft.h"
 
-boolean ft_isdigit(int c)
+t_bool	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

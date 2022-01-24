@@ -6,12 +6,12 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:15:19 by amyroshn          #+#    #+#             */
-/*   Updated: 2021/11/23 11:15:25 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:00:11 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../libft.h"
 
-int	ft_isprint(int c)
+t_bool	ft_isprint(int c)
 {
 	return (c > 31 && c < 127);
 }

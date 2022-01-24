@@ -6,7 +6,7 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:02:42 by amyroshn          #+#    #+#             */
-/*   Updated: 2022/01/24 07:44:08 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:01:12 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef int boolean;
+typedef int	t_bool;
 
 /* char/ */
-boolean	ft_isalpha(int c);
-boolean	ft_isdigit(int c);
-boolean	ft_isalnum(int c);
-boolean	ft_isascii(int c);
-boolean	ft_isprint(int c);
-boolean	ft_isspace(char c);
+t_bool	ft_isalpha(int c);
+t_bool	ft_isdigit(int c);
+t_bool	ft_isalnum(int c);
+t_bool	ft_isascii(int c);
+t_bool	ft_isprint(int c);
+t_bool	ft_isspace(char c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 /* mem/ */
@@ -52,7 +52,7 @@ void	ft_putendl(char *s);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr(long n);
 void	ft_putnbr_fd(long n, int fd);
-void	ft_putnbr_base(int	nbr, char	*base);
+void	ft_putnbr_base(int nbr, char *base);
 int		ft_printf(const char *s, ...);
 /* string/ */
 char	*ft_strchr(const char *str, int c);

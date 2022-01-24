@@ -6,7 +6,7 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 17:16:56 by amyroshn          #+#    #+#             */
-/*   Updated: 2021/12/15 14:08:10 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:12:36 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -39,7 +39,7 @@ char	*free_memory(t_felement *elem, char *tmp)
 	return (NULL);
 }
 
-char	*ft_strjoin_modif(char *to, char *from, size_t size)
+char	*ft_join(char *to, char *from, size_t size)
 {
 	char	*res;
 	size_t	i;

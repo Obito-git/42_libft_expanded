@@ -6,12 +6,12 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:14:43 by amyroshn          #+#    #+#             */
-/*   Updated: 2022/01/24 07:31:32 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 08:59:43 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../libft.h"
 
-boolean	ft_isascii(int c)
+t_bool	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

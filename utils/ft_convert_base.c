@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/24 09:05:47 by amyroshn          #+#    #+#             */
+/*   Updated: 2022/01/24 09:06:39 by amyroshn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "../libft.h"
-#include <stdio.h>
 
 static size_t	ft_resultlen(unsigned long nbr, char *base)
 {
-	size_t res_len;
+	size_t	res_len;
 
 	res_len = 1;
 	while (nbr % (long) ft_strlen(base) != nbr)
@@ -38,7 +48,7 @@ static int	ft_base_check(char	*base)
 	return (1);
 }
 
-static char *transform(unsigned long nbr, char	*base)
+static char	*transform(unsigned long nbr, char *base)
 {
 	char	*res;
 	size_t	i;
@@ -58,7 +68,7 @@ static char *transform(unsigned long nbr, char	*base)
 	return (res);
 }
 
-char *ft_convert_base(unsigned long nbr, char *base)
+char	*ft_convert_base(unsigned long nbr, char *base)
 {
 	if (!ft_base_check(base))
 		return (NULL);

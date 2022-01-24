@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/24 09:03:58 by amyroshn          #+#    #+#             */
+/*   Updated: 2022/01/24 09:05:14 by amyroshn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "../libft.h"
 
 static int	ft_base_check(char	*base)
@@ -26,12 +37,12 @@ static int	ft_base_check(char	*base)
 
 static void	ft_print_base_numb(long nbr, char	*base)
 {
-	if ((long) (nbr % ft_strlen(base)) != nbr)
+	if ((long)(nbr % ft_strlen(base)) != nbr)
 		ft_print_base_numb(nbr / ft_strlen(base), base);
 	ft_putchar(base[nbr % ft_strlen(base)]);
 }
 
-void	ft_putnbr_base(int	nbr, char	*base)
+void	ft_putnbr_base(int nbr, char *base)
 {
 	long	exten_numb;
 
