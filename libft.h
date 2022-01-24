@@ -6,7 +6,7 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:02:42 by amyroshn          #+#    #+#             */
-/*   Updated: 2022/01/24 10:45:37 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 11:49:59 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_strdup(const char *src);
 char	*ft_strrev(char *str);	
 size_t	ft_strlen(const char *str);
-int		ft_strcmp(char	*s1, char	*s2);
+int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char	*dest, const char	*src, size_t	size);
