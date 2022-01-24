@@ -17,6 +17,7 @@ CHR_DIR = char/
 LST_DIR = lists/
 PRINT_DIR = print/
 UTIL_DIR = utils/
+MATH_DIR = math/
 PRINTF_DIR = $(PRINT_DIR)ft_printf/
 GNL_DIR = $(UTIL_DIR)gnl/
 
@@ -31,6 +32,7 @@ $(STR_DIR)ft_strnstr.c $(STR_DIR)ft_strtrim.c $(STR_DIR)ft_strchr.c $(STR_DIR)ft
 $(STR_DIR)ft_strlen.c $(STR_DIR)ft_strncmp.c $(STR_DIR)ft_strrchr.c $(STR_DIR)ft_substr.c \
 $(STR_DIR)ft_strcpy.c $(STR_DIR)ft_strcat.c $(STR_DIR)ft_strcpy.c $(STR_DIR)ft_strrev.c \
 $(UTIL_DIR)ft_atoi.c $(UTIL_DIR)ft_itoa.c $(UTIL_DIR)ft_convert_base.c $(UTIL_DIR)ft_numblen.c \
+$(MATH_DIR)ft_pow.c \
 $(GNL_DIR)get_next_line.c $(GNL_DIR)get_next_line_utils.c \
 $(PRINTF_DIR)ft_printf.c $(PRINTF_DIR)parsing.c $(PRINTF_DIR)patterns.c \
 $(LST_DIR)ft_lstadd_back.c $(LST_DIR)ft_lstadd_front.c $(LST_DIR)ft_lstclear.c $(LST_DIR)ft_lstdelone.c \

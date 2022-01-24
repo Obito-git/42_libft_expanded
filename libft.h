@@ -6,7 +6,7 @@
 /*   By: amyroshn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:02:42 by amyroshn          #+#    #+#             */
-/*   Updated: 2022/01/24 09:18:42 by amyroshn         ###   ########.fr       */
+/*   Updated: 2022/01/24 09:36:27 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ char	*get_next_line(int fd);
 size_t	ft_numblen(long numb);
 char	*ft_itoa(long n);
 char	*ft_convert_base(unsigned long nbr, char *base);
+/* math/ */
+int	ft_pow(int	nb, int	power);
 /* lists/ */
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
