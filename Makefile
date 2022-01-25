@@ -45,7 +45,7 @@ all: $(NAME)
 %.o: %.c
 	@$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME): git check norm $(OBJS)
+$(NAME): check norm $(OBJS)
 	@echo ${GREEN}"Objects have been created!"${ENDCOLOR}
 	@echo ""
 	@ar rc $(NAME) $(OBJS)
