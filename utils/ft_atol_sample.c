@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "../libft.h"
 
-int	ft_check(char *numb, int *sign)
+int	ft_check(char *numb, long *sign)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ long	ft_atol_sample(char *numb)
 {
 	long	res;
 	size_t	i;
-	int		sign;
+	long	sign;
 
 	res = 0;
 	i = 0;

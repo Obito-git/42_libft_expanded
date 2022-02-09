@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "../libft.h"
 
-int	ft_pow(int nb, int power)
+long	ft_pow(long nb, int power)
 {
 	if (power < 0)
 		return (0);

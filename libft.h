@@ -82,7 +82,7 @@ size_t	ft_numblen(long numb);
 char	*ft_itoa(long n);
 char	*ft_convert_base(unsigned long nbr, char *base);
 /* math/ */
-int		ft_pow(int nb, int power);
+long	ft_pow(long nb, int power);
 /* lists/ */
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
