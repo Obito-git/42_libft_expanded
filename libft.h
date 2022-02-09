@@ -76,6 +76,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 /* utils/ */
 int		ft_atoi( const char *s);
+long	ft_atol_sample(char *numb);
 char	*get_next_line(int fd);
 size_t	ft_numblen(long numb);
 char	*ft_itoa(long n);
