@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "../libft.h"
 
-t_bool	ft_isspace(char c)
+bool	ft_isspace(char c)
 {
 	return (c == '\f' || c == '\t' || c == ' '
 		|| c == '\n' || c == '\r' || c == '\v');

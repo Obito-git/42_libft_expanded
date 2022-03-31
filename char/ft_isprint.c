@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "../libft.h"
 
-t_bool	ft_isprint(int c)
+bool	ft_isprint(int c)
 {
 	return (c > 31 && c < 127);
 }

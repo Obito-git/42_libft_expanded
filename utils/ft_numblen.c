@@ -16,7 +16,7 @@ size_t	ft_numblen(long numb)
 	size_t	i;
 
 	i = 0;
-	if (numb == LONG_MIN - 1)
+	if (numb == LONG_MIN)
 		return (20);
 	if (numb <= 0)
 	{

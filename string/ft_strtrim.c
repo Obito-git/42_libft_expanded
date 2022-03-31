@@ -34,7 +34,11 @@ static size_t	get_end(char const *s1, char const *set)
 	size_t	end;
 	size_t	y;
 
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
+	if (end == 0)
+		return (end);
+	else
+		end--;
 	while (end > 0)
 	{
 		y = 0;
@@ -54,7 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 
 	if (!s1 || !set)
-		return (ft_strdup(""));
+		return (NULL);
 	start = get_start(s1, set);
 	end = get_end(s1, set);
 	if (start > end)

@@ -13,7 +13,7 @@
 
 void	ft_putnbr(long n)
 {
-	if (n == LONG_MIN - 1)
+	if (n == LONG_MIN)
 	{
 		ft_putstr("-9223372036854775808");
 		return ;

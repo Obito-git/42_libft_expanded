@@ -14,9 +14,9 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
-# include "constants.h"
-# define TRUE 1
-# define FALSE 0
+# include <stdarg.h>
+# include <stdbool.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -24,15 +24,13 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef int	t_bool;
-
 /* char/ */
-t_bool	ft_isalpha(int c);
-t_bool	ft_isdigit(int c);
-t_bool	ft_isalnum(int c);
-t_bool	ft_isascii(int c);
-t_bool	ft_isprint(int c);
-t_bool	ft_isspace(char c);
+bool	ft_isalpha(int c);
+bool	ft_isdigit(int c);
+bool	ft_isalnum(int c);
+bool	ft_isascii(int c);
+bool	ft_isprint(int c);
+bool	ft_isspace(char c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 /* mem/ */
@@ -58,7 +56,7 @@ int		ft_printf(const char *s, ...);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strdup(const char *src);
-char	*ft_strrev(char *str);	
+char	*ft_strrev(char *str);
 size_t	ft_strlen(const char *str);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
@@ -85,9 +83,9 @@ char	*ft_convert_base(unsigned long nbr, char *base);
 long	ft_pow(long nb, int power);
 /* lists/ */
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **alst, t_list *new);
+void	ft_lstadd_front(t_list **alst, t_list *n);
 int		ft_lstsize(t_list *lst);
-void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstadd_back(t_list **alst, t_list *n);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
