@@ -9,7 +9,7 @@
 /*   Updated: 2021/11/23 11:52:28 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "libft.h"
 
 static int	get_numblen(long n)
 {

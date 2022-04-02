@@ -9,7 +9,7 @@
 /*   Updated: 2022/01/24 09:06:53 by amyroshn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
+#include "libft.h"
 
 size_t	ft_numblen(long numb)
 {
